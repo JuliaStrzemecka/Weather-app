@@ -1,4 +1,4 @@
-var apiKey = "38e63ea341c8aef4c9330681d6928e4c";
+var apiKey = "your key";
 
 var searchBtn = document.querySelector('#search-btn');
 
