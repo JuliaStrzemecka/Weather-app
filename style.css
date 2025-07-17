@@ -1,4 +1,4 @@
-/* Base */
+/* Base*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -73,36 +73,48 @@ header h2 {
     font-size: 0.9rem;
 }
 
-/* Result */
+/* Results */
 #result {
     margin-top: 30px;
     width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: none; /* Domyślnie ukryty */
+    max-width: 800px;
+    display: none; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 #result.active {
-    display: block;
+    display: grid;
 }
 
-#result h4 {
-    font-size: 1.5rem;
+/* Container for one city*/
+.weather-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+}
+
+.weather-card h4 {
+    font-size: 1.3rem;
     color: #004e92;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-#result p {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+.weather-card p {
+    margin: 5px 0;
+    color: #666;
 }
 
-#result span {
-    font-size: 2rem;
+.weather-card span {
+    font-size: 1.8rem;
     font-weight: bold;
     color: #0074d9;
 }
