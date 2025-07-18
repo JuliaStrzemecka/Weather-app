@@ -73,6 +73,17 @@ header h2 {
     font-size: 0.9rem;
 }
 
+#country-select{
+    display: none;
+}
+
+.select-wrapper {
+    visibility: hidden;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
 /* Results */
 #result {
     margin-top: 30px;
