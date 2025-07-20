@@ -23,16 +23,24 @@ header h2 {
     color: #004e92;
 }
 
+#search-bar{
+    width: 40svw;
+    margin: 0 auto;
+}
+
 /* Search bar */
 #search-bar form {
     display: flex;
+    flex-direction: column;
+    align-items: center; /* to centrowanie inputa itd. */
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 15px 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
 
 #search-bar input[type="text"] {
@@ -73,16 +81,23 @@ header h2 {
     font-size: 0.9rem;
 }
 
-#country-select{
-    display: none;
+#country-select {
+    margin: auto 0;
+    width: 50%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .select-wrapper {
     visibility: hidden;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    text-align: center;
 }
+
 
 /* Results */
 #result {

@@ -1,4 +1,4 @@
-const apiKey = "";
+const apiKey = "fb74a00dfe5614f69ea17dd681d3b9a2";
 const form = document.querySelector("form");
 const selectWrapper = document.querySelector(".select-wrapper");
 const select = document.querySelector("#country-select");
@@ -19,11 +19,11 @@ class WeatherCity {
 
     render(){
         const container = document.createElement('div');
-        container.classList.add = "weather-card";
+        container.classList.add("weather-card");
         container.innerHTML = `<h4>${this.name}</h4>
             <p>${this.country}</p>
             <span>${this.temp}°C</span>
-            <p>Feels like ${this.feelsLike}°C<</p>`;
+            <p>Feels like ${this.feelsLike}°C</p>`;
 
         return container;
     }
@@ -35,7 +35,7 @@ document.querySelector("form").addEventListener("submit", async function(e) {
     
     const query = cityInput.value.trim();
     select.innerHTML = "";
-    select.style.display = "none";
+    // select.style.display = "none";
     msg.textContent = "";
 
     if(!query){
@@ -57,7 +57,7 @@ document.querySelector("form").addEventListener("submit", async function(e) {
         cities.forEach(city => {
             const option = document.createElement("option");
             option.value = JSON.stringify(city);
-            option.textContent = `${city.country} ${city.state ? " (" + city.state + ") " : ""}`;
+            option.textContent = `${city.name}, ${city.country}${city.state ? " - " + city.state : ""}`;
             select.appendChild(option)
         })
 
@@ -75,7 +75,7 @@ select.addEventListener("change", async () => {
         const weatherRes = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`);
         const weather = await weatherRes.json();
 
-        const card = new WeatherCity(weather.name, weather.main.temp - 273.15, weather.weather[0].main, weather.main.feels_like - 273.15, weather.sys.country);
+        const card = new WeatherCity(weather.name, weather.weather[0].main, weather.main.temp - 273.15,  weather.main.feels_like - 273.15, weather.sys.country);
         resultSection.append(card.render());
 
     } catch(error){
