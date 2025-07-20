@@ -1,4 +1,4 @@
-const apiKey = "fb74a00dfe5614f69ea17dd681d3b9a2";
+const apiKey = "";
 const form = document.querySelector("form");
 const selectWrapper = document.querySelector(".select-wrapper");
 const select = document.querySelector("#country-select");
