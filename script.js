@@ -62,6 +62,7 @@ document.querySelector("form").addEventListener("submit", async function(e) {
         })
 
         select.style.display = "inline-block";
+        select.value = "";
     } catch(error){
         msg.textContent = "Error fetching location data.";
         console.error(error);

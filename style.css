@@ -16,6 +16,10 @@ body {
     color: #333;
 }
 
+header{
+    text-align: center;
+}
+
 /* Headline */
 header h2 {
     font-size: 2.5rem;
@@ -24,7 +28,7 @@ header h2 {
 }
 
 #search-bar{
-    width: 40svw;
+    width: 70svw;
     margin: 0 auto;
 }
 
@@ -104,14 +108,9 @@ header h2 {
     margin-top: 30px;
     width: 100%;
     max-width: 800px;
-    display: none; 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-}
-
-#result.active {
     display: grid;
+    grid-template-columns: 1fr; 
 }
 
 /* Container for one city*/
@@ -143,4 +142,14 @@ header h2 {
     font-size: 1.8rem;
     font-weight: bold;
     color: #0074d9;
+}
+
+/*Responsibility*/
+@media (min-width: 992px) {
+    #search-bar{
+        width: 40svw;
+    }
+    #result {
+        grid-template-columns: repeat(3, 1fr); /* od 768px – 3 kolumny */
+    }
 }
