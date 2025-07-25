@@ -70,7 +70,7 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #004e92;
 }
 
 input:checked + .slider::before {
@@ -183,7 +183,7 @@ header h2 {
 }
 
 #toggle-select:hover {
-    background-color: #0074d9;
+    background-color: #004e92;
 }
 
 #delete-selected {
@@ -281,8 +281,74 @@ header h2 {
     color: #666;
 }
 
+/*********************************************** Dark mode */
 
-/*Responsibility*/
+body.dark-mode {
+  background: linear-gradient(168deg, #1a2633 12%, #435976 50%);
+  color: #f0f0f0;
+}
+
+body.dark-mode .weather-card {
+  background-color: #9bb0cf;
+}
+
+body.dark-mode .header-content > h2 {
+  color: #d0e6ff;
+}
+
+body.dark-mode .weather-card {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .slider {
+  background-color: #555;
+}
+
+body.dark-mode input:checked + .slider {
+  background-color: #485d7e;
+}
+
+body.dark-mode #search-bar input[type="text"] {
+  border-color: #4c6fae;
+  background-color: #1f2a3b;
+  color: #f0f0f0;
+}
+
+body.dark-mode #search-bar input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+body.dark-mode #search-bar input[type="text"]:focus {
+  border-color: #232d3d;
+}
+
+body.dark-mode #search-bar form {
+  background-color: #9bb0cf;
+}
+
+body.dark-mode #search-bar button,
+body.dark-mode .bulk-actions #toggle-select {
+  background-color: #485d7e;
+  color: white;
+}
+
+body.dark-mode #search-bar button:hover,
+body.dark-mode .bulk-actions #toggle-select:hover {
+  background-color: #485d7e;
+}
+
+body.dark-mode .weather-card h4 {
+  color: #485d7e;
+}
+
+body.dark-mode .weather-card p {
+  color: #475e81;
+}
+
+body.dark-mode .weather-card .weather-temp, body.dark-mode .weather-card .weather-desc{
+    color: #172c4c;
+}
+/*********************************************** Responsibility */
 @media (min-width: 992px) {
     .header-content{
         width: 40svw ;
@@ -291,6 +357,6 @@ header h2 {
         width: 40svw;
     }
     #result {
-        grid-template-columns: repeat(3, 1fr); /* od 768px – 3 kolumny */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
