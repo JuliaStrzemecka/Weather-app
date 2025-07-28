@@ -1,5 +1,7 @@
 const apiKey = "";
 
+const themeSwitch = document.querySelector("#toggle-theme");
+
 const form = document.querySelector("form");
 const selectWrapper = document.querySelector(".select-wrapper");
 const select = document.querySelector("#country-select");
@@ -74,6 +76,16 @@ function renderSavedCities() {
         resultSection.append(card.render());
     });
 }
+
+
+// === THEME CHANGE ===
+themeSwitch.addEventListener("click", function(){
+    if(this.checked){
+    document.querySelector("body").classList.add("dark-mode");}
+    else{
+        document.querySelector("body").classList.remove("dark-mode");
+    }
+})
 
 
 // === FORM SUBMIT ===

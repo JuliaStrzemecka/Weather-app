@@ -2,6 +2,6 @@ In this project, I'm trying to create a simple weather app using HTML, APIs and 
 Enter a city name and instantly get the current weather conditions thanks to a live API! (OpenWeatherMap in this case) 
 
 🛠️ To Do:
- ⬜ Add weather icons
- ⬜ Display humidity and wind speed (maybe??)
- ⬜ Implement dark mode
+ [x] Add weather icons
+ [ ] Display humidity and wind speed (maybe??)
+ [x] Implement dark mode
