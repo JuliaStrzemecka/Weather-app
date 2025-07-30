@@ -3,5 +3,4 @@ Enter a city name and instantly get the current weather conditions thanks to a l
 
 🛠️ To Do:
  [x] Add weather icons
- [ ] Display humidity and wind speed (maybe??)
  [x] Implement dark mode
